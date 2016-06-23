@@ -2,11 +2,11 @@
 ###增加SwipeRefreshLayout，SwipeRefreshLayout是谷歌官方提供的下拉刷新控件，可直接与ListView，RecyclerView,GridView等直接嵌套使用，不会冲突
 
 
-### FloatingActionButton
+# FloatingActionButton
 
 FloatingActionButton 直接在xml中调用，和Button使用方法是一样的
 
-### SwipeRefreshLayout
+# SwipeRefreshLayout
 SwipeRefreshLayout也是直接在xml中调用，就和用LinearLayout等常用布局一样调用，不过SwipeRefreshLayout中只能嵌套一个layout，和ScrollView差不多
 
 设置下拉圆圈上的颜色，蓝色、绿色、橙色、红色
