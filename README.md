@@ -1,5 +1,5 @@
-## 增加5.0后提出的Material Design中的FloatingActionButton，需要导入com.android.support:design:23.4.0包，因为是android5.0（API21）后才有的，所以须在新建一个layout-v21的包，以供android5.0（API21）及以上的手机调用，当然layout中也要有一个布局，以应对android5.0（API21）以下的手机进行适配
-## 增加SwipeRefreshLayout，SwipeRefreshLayout是谷歌官方提供的下拉刷新控件，可直接与ListView，RecyclerView,GridView等直接嵌套使用，不会冲突
+###增加5.0后提出的Material Design中的FloatingActionButton，需要导入com.android.support:design:23.4.0包，因为是android5.0（API21）后才有的，所以须在新建一个layout-v21的包，以供android5.0（API21）及以上的手机调用，当然layout中也要有一个布局，以应对android5.0（API21）以下的手机进行适配
+###增加SwipeRefreshLayout，SwipeRefreshLayout是谷歌官方提供的下拉刷新控件，可直接与ListView，RecyclerView,GridView等直接嵌套使用，不会冲突
 
 
 ### FloatingActionButton
