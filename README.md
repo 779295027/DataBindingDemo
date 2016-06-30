@@ -1,3 +1,40 @@
+###给RecyclerView添加间距
+
+添加间距，间距为1dp
+
+```java
+        mainBinding.recyclerView.addItemDecoration(new SpaceItemDecoration(1));
+
+```
+
+SpaceItemDecoration为间距类，继承于RecyclerView.ItemDecoration ，可做渐变等加特技的间隔，
+onDraw方法先于绘画子项
+onDrawOver在绘画子项之后，一般我们选择复写其中一个即可。
+getItemOffsets 可以通过outRect.set()为每个Item设置一定的偏移量，主要用于绘制Decorator。
+
+```java
+public class SpaceItemDecoration extends RecyclerView.ItemDecoration {
+    int mSpace;
+
+    /**
+     * @param space 传入的值，其单位视为dp
+     */
+    public SpaceItemDecoration(int space) {
+        this.mSpace = space;
+    }
+
+
+    @Override
+    public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
+        if (parent.getChildPosition(view) != 0) {
+            outRect.top = mSpace;
+        }
+    }
+}
+
+```
+
+
 ###增加5.0后提出的Material Design中的FloatingActionButton，需要导入com.android.support:design:23.4.0包，因为是android5.0（API21）后才有的，所以须在新建一个layout-v21的包，以供android5.0（API21）及以上的手机调用，当然layout中也要有一个布局，以应对android5.0（API21）以下的手机进行适配
 ###增加SwipeRefreshLayout，SwipeRefreshLayout是谷歌官方提供的下拉刷新控件，可直接与ListView，RecyclerView,GridView等直接嵌套使用，不会冲突
 

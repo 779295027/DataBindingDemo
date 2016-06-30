@@ -15,6 +15,7 @@ import com.sss.demo.R;
 import com.sss.demo.bean.User;
 import com.sss.demo.databinding.ActivityMainBinding;
 import com.sss.demo.util.MyAdpter;
+import com.sss.demo.util.SpaceItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -90,6 +91,8 @@ public class MainActivity extends AppCompatActivity {
         mainBinding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
 //        mainBinding.recyclerView.seton
         adapter = new MyAdpter(this, list);
+        //添加间距，间距为1dp
+        mainBinding.recyclerView.addItemDecoration(new SpaceItemDecoration(1));
         mainBinding.recyclerView.setAdapter(adapter);
         mainBinding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
