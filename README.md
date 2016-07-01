@@ -1,5 +1,16 @@
 ###添加图片加载框架Glide（谷歌官方提供的调用方便）
 
+导入支持包
+```java
+dependencies {
+    ...
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+}
+
+
+```
+
+
 不要再非主线程里面使用Glide加载图片，如果真的使用了，请把context参数换成getApplicationContext()
 加载图片时直接调用，简单省事，（注意被忘了添加网络权限）
 
