@@ -1,5 +1,6 @@
 package com.sss.demo.activity;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -7,7 +8,6 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -51,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 showToast("clicked button");
 //                adapter.setUser(new User("点击", "1"));
-                adapter.setList(list);
+//                adapter.setList(list);
+                startActivity(new Intent(getApplicationContext(), ImageActivity.class));
             }
         });
         // 设置下拉圆圈上的颜色，蓝色、绿色、橙色、红色
@@ -67,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
         mainBinding.swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                Log.i("main", "onRefresh called from SwipeRefreshLayout");
 //                adapter.setFristData(new User("刷新", "刷新"), mainBinding.swipe);
                 new OnRefreshAsyncTask().execute();
                 adapter.setFristData(new User("刷新", "刷新"));

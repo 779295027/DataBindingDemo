@@ -1,3 +1,17 @@
+###添加图片加载框架Glide（谷歌官方提供的调用方便）
+
+不要再非主线程里面使用Glide加载图片，如果真的使用了，请把context参数换成getApplicationContext()
+加载图片时直接调用，简单省事，（注意被忘了添加网络权限）
+
+```java
+Glide.with(context)
+                .load(url)//图片地址
+                .placeholder(R.mipmap.ic_loading)//加载时显示的图，找不到图片时也显示这个
+                .into(imageView);//imageview对象
+
+```
+
+
 ###给RecyclerView添加间距  
 
 添加间距，间距为1dp
