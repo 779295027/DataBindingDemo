@@ -7,7 +7,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.sss.demo.R;
 import com.sss.demo.bean.User;
@@ -22,6 +21,16 @@ public class MyAdpter extends RecyclerView.Adapter<MyAdpter.BindingHolder> {
     private LayoutInflater inflater;
     private Context context;
     private List<User> list;
+    private OnClickCallBack onClickCallBack;
+
+    public void setOnClickCallBack(OnClickCallBack onClickCallBack) {
+        this.onClickCallBack = onClickCallBack;
+    }
+
+    public interface OnClickCallBack {
+        void onClick(String msg);
+    }
+
 
     public MyAdpter(Context context, List<User> list) {
         this.context = context;
@@ -46,7 +55,9 @@ public class MyAdpter extends RecyclerView.Adapter<MyAdpter.BindingHolder> {
         holder.binding.listItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "" + position, 1000).show();
+                if (onClickCallBack != null)
+                    onClickCallBack.onClick("这是我要传递的消息:" + position);
+//                Toast.makeText(context, "" + position, Toast.LENGTH_SHORT).show();
             }
         });
     }

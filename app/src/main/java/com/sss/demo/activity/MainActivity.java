@@ -91,6 +91,12 @@ public class MainActivity extends AppCompatActivity {
         mainBinding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
 //        mainBinding.recyclerView.seton
         adapter = new MyAdpter(this, list);
+        adapter.setOnClickCallBack(new MyAdpter.OnClickCallBack() {
+            @Override
+            public void onClick(String msg) {
+                showToast(msg);
+            }
+        });
         //添加间距，间距为1dp
         mainBinding.recyclerView.addItemDecoration(new SpaceItemDecoration(1));
         mainBinding.recyclerView.setAdapter(adapter);
