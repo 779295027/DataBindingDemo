@@ -106,6 +106,12 @@ public class MainActivity extends AppCompatActivity {
                 showToast("clicked fab  ");
             }
         });
+        mainBinding.button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), TabActivity.class));
+            }
+        });
     }
 
     public void showToast(String s) {

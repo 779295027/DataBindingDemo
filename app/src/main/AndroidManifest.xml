@@ -18,6 +18,7 @@
         </activity>
 
         <activity android:name=".activity.ImageActivity"/>
+        <activity android:name=".activity.TabActivity"/>
     </application>
 
 </manifest>
