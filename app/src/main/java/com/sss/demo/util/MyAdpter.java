@@ -69,12 +69,12 @@ public class MyAdpter extends RecyclerView.Adapter<MyAdpter.BindingHolder> {
 
     public void setFristData(User user) {
         list.add(0, user);
-        notifyItemInserted(0);
+        notifyItemInserted(0);//该方法本身就是在后台运行，不要放到异步中，否则会报错
     }
 
     public void setFristData(User user, SwipeRefreshLayout layout) {
         list.add(0, user);
-        notifyItemInserted(0);
+        notifyItemInserted(0);//该方法本身就是在后台运行，不要放到异步中，否则会报错
         layout.stopNestedScroll();
     }
 
