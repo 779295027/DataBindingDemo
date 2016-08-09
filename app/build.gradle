@@ -8,11 +8,11 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.sss.demo"
+        applicationId "com.buluanmai.app.buluanmaiApp"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
-        versionName "1.0"
+        versionName "2.0"
     }
     buildTypes {
         release {

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,13 +15,13 @@ import android.widget.Toast;
 import com.sss.demo.R;
 import com.sss.demo.bean.User;
 import com.sss.demo.databinding.ActivityMainBinding;
-import com.sss.demo.util.MyAdpter;
+import com.sss.demo.adapter.MyAdpter;
 import com.sss.demo.util.SpaceItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private List<User> list;
     private ActivityMainBinding mainBinding;
@@ -46,15 +47,7 @@ public class MainActivity extends AppCompatActivity {
         u.setName(null);
         u.setAge("20");
         mainBinding.setUser(u);
-        mainBinding.button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showToast("clicked button");
-//                adapter.setUser(new User("点击", "1"));
-//                adapter.setList(list);
-                startActivity(new Intent(getApplicationContext(), ImageActivity.class));
-            }
-        });
+        mainBinding.button.setOnClickListener(this);
         // 设置下拉圆圈上的颜色，蓝色、绿色、橙色、红色
         mainBinding.swipe.setColorSchemeResources(android.R.color.holo_blue_bright, android.R.color.holo_green_light,
                 android.R.color.holo_orange_light, android.R.color.holo_red_light);
@@ -106,16 +99,38 @@ public class MainActivity extends AppCompatActivity {
                 showToast("clicked fab  ");
             }
         });
-        mainBinding.button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), TabActivity.class));
-            }
-        });
+        mainBinding.button2.setOnClickListener(this);
+        mainBinding.button3.setOnClickListener(this);
+        mainBinding.button4.setOnClickListener(this);
+    }
+
+    private void showSnackbar(View v, String s) {
+        Snackbar.make(v, s, Snackbar.LENGTH_SHORT).show();
     }
 
     public void showToast(String s) {
         Toast.makeText(this, "" + s, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.button:
+                showToast("clicked button");
+//                adapter.setUser(new User("点击", "1"));
+//                adapter.setList(list);
+                startActivity(new Intent(getApplicationContext(), ImageActivity.class));
+                break;
+            case R.id.button2:
+                startActivity(new Intent(getApplicationContext(), TabActivity.class));
+                break;
+            case R.id.button3:
+                showSnackbar(v, "");
+                break;
+            case R.id.button4:
+                startActivity(new Intent(getApplicationContext(), HaveHeaderRecyclerActivity.class));
+                break;
+        }
     }
 
 

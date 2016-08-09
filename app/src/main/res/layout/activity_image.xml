@@ -6,6 +6,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
@@ -16,8 +17,29 @@
             android:id="@+id/img"
             android:layout_width="match_parent"
             android:layout_height="250dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:src="@mipmap/ic_loading"/>
 
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入文字"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/text_input_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入文字 "
+            />
     </LinearLayout>
 
 

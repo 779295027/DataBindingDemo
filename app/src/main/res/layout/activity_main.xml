@@ -91,11 +91,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="ImageActivity"/>
+
                     <Button
                         android:id="@+id/button2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="TabActivity"/>
+
+                    <Button
+                        android:id="@+id/button3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="snackbar"/>
+
+                    <Button
+                        android:id="@+id/button4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="HaveHeaderRecyclerActivity"/>
                 </LinearLayout>
 
 

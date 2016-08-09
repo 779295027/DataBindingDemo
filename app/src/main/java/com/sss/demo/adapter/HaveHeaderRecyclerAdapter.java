@@ -1,4 +1,4 @@
-package com.sss.demo.util;
+package com.sss.demo.adapter;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
@@ -10,14 +10,18 @@ import android.view.ViewGroup;
 
 import com.sss.demo.R;
 import com.sss.demo.bean.User;
+import com.sss.demo.databinding.ItemTestBinding;
 import com.sss.demo.databinding.ListItemBinding;
 
 import java.util.List;
 
 /**
- * Created by sss on 2016/6/13.
+ * Created by sss on 2016/7/15.
  */
-public class MyAdpter extends RecyclerView.Adapter<MyAdpter.BindingHolder> {
+public class HaveHeaderRecyclerAdapter extends RecyclerView.Adapter<HaveHeaderRecyclerAdapter.BindingHolder> {
+
+    private final static int HEADER = 0;//头部
+    private final static int ITEM = 1;//item
     private LayoutInflater inflater;
     private Context context;
     private List<User> list;
@@ -32,34 +36,56 @@ public class MyAdpter extends RecyclerView.Adapter<MyAdpter.BindingHolder> {
     }
 
 
-    public MyAdpter(Context context, List<User> list) {
+    public HaveHeaderRecyclerAdapter(Context context, List<User> list) {
         this.context = context;
         this.list = list;
         inflater = LayoutInflater.from(context);
     }
 
+
+    @Override
+    public int getItemViewType(int position) {
+        if (position == 0) {
+            return HEADER;
+        }
+        return ITEM;
+    }
+
     @Override
     public BindingHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        ListItemBinding listItemBinding = DataBindingUtil.inflate(inflater, R.layout.list_item, parent, false);
+        BindingHolder bindingHolder;
+        if (viewType == ITEM) {
+            ListItemBinding listItemBinding = DataBindingUtil.inflate(inflater, R.layout.list_item, parent, false);
 //        or
 //        ListItemBinding binding = ListItemBinding.inflate(inflater, parent, false);
-        BindingHolder bindingHolder = new BindingHolder(listItemBinding.getRoot());
-        bindingHolder.setBinding(listItemBinding);
+            bindingHolder = new BindingHolder(listItemBinding.getRoot());
+            bindingHolder.setBinding(listItemBinding);
+        } else {
+            ItemTestBinding itemTestBinding = DataBindingUtil.inflate(inflater, R.layout.item_test, parent, false);
+            bindingHolder = new BindingHolder(itemTestBinding.getRoot());
+            bindingHolder.setItemTestBinding(itemTestBinding);
+        }
+        bindingHolder.setViewType(viewType);
         return bindingHolder;
     }
 
     @Override
     public void onBindViewHolder(BindingHolder holder, final int position) {
-        User user = list.get(position);
-        holder.binding.setUser(user);
-        holder.binding.listItem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (onClickCallBack != null)
-                    onClickCallBack.onClick("这是我要传递的消息:" + position);
-//                Toast.makeText(context, "" + position, Toast.LENGTH_SHORT).show();
-            }
-        });
+        if (holder.viewType == HEADER) {
+//            这里可以对holder.headerBinding，也就是头部进行操作
+        } else {
+            User user = list.get(position - 1);
+            holder.binding.setUser(user);
+            holder.binding.listItem.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (onClickCallBack != null)
+                        onClickCallBack.onClick("这是我要传递的消息:" + position);
+                }
+            });
+        }
+
+
     }
 
     public void setList(List<User> l) {
@@ -86,11 +112,21 @@ public class MyAdpter extends RecyclerView.Adapter<MyAdpter.BindingHolder> {
 
     @Override
     public int getItemCount() {
-        return list != null ? list.size() : 0;
+        return list != null ? list.size() + 1 : 1;
     }
 
     public class BindingHolder extends RecyclerView.ViewHolder {
+        private int viewType;
         private ListItemBinding binding;
+        private ItemTestBinding headerBinding;
+
+        public void setItemTestBinding(ItemTestBinding itemTestBinding) {
+            this.headerBinding = itemTestBinding;
+        }
+
+        public void setViewType(int viewType) {
+            this.viewType = viewType;
+        }
 
         public BindingHolder(View v) {
             super(v);

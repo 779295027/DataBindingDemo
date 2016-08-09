@@ -61,19 +61,19 @@ public class TabActivity extends FragmentActivity {
         });
 
         //添加viewpager
-        binding.tabLayout.setupWithViewPager(binding.viewPager);
+            binding.tabLayout.setupWithViewPager(binding.viewPager);
 
-        //第一个item是默认选中的，所以把图片设置成选中状态的图片
-        binding.tabLayout.getTabAt(0).setIcon(getResources().getDrawable(R.mipmap.page2));
+            //第一个item是默认选中的，所以把图片设置成选中状态的图片
+            binding.tabLayout.getTabAt(0).setIcon(getResources().getDrawable(R.mipmap.page2));
 
-        //获取item的总数，并从第二个开始把图片设置成未选中状态的图片
-        int i = binding.tabLayout.getTabCount();
-        for (int j = 1; j < i; j++) {
-            binding.tabLayout.getTabAt(j).setIcon(getResources().getDrawable(R.mipmap.page1));
-        }
+            //获取item的总数，并从第二个开始把图片设置成未选中状态的图片
+            int i = binding.tabLayout.getTabCount();
+            for (int j = 1; j < i; j++) {
+                binding.tabLayout.getTabAt(j).setIcon(getResources().getDrawable(R.mipmap.page1));
+            }
 
-        //当添加item选择改变时将要调用的
-        binding.tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            //当添加item选择改变时将要调用的
+                binding.tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             /**
              * 当调用一个选项卡进入选中状态。
              * @param tab

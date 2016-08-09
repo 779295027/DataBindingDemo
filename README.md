@@ -1,3 +1,5 @@
+###添加带header的RecyclerView
+
 ###添加TabLayout+ViewPager 实现底部Tab布局
 
 
@@ -305,3 +307,9 @@ xml中使用方式
 ```
 
 tablyout对象须实现setOnTabSelectedListener(OnTabSelectedListener onTabSelectedListener)方法，当添加item选择改变时会调用该方法
+
+#HaveHeaderRecyclerAdapter
+这是一个给RecyclerView添加一个头部的适配器
+
+核心是根据Adapter的getItemViewType()方法的参数position来给对应的item一个type值
+在onCreateViewHolder()中根据type判断是不是头部就行了
