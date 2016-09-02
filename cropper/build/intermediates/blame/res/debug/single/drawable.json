@@ -48,12 +48,12 @@
         "source": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/drawable/abc_list_selector_holo_dark.xml"
     },
     {
-        "merged": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
-        "source": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/drawable/abc_btn_borderless_material.xml"
-    },
-    {
         "merged": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml",
         "source": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/drawable/abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
+        "source": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/drawable/abc_btn_borderless_material.xml"
     },
     {
         "merged": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",

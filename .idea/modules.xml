@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/DataBindingDemo.iml" filepath="$PROJECT_DIR$/DataBindingDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/cropper/cropper.iml" filepath="$PROJECT_DIR$/cropper/cropper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plusandminuslayout/plusandminuslayout.iml" filepath="$PROJECT_DIR$/plusandminuslayout/plusandminuslayout.iml" />
     </modules>
   </component>
 </project>

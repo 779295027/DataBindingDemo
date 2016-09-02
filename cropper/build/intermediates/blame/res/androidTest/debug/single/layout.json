@@ -20,12 +20,12 @@
         "source": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/res/merged/androidTest/debug/layout/notification_media_action.xml",
-        "source": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/notification_media_action.xml"
-    },
-    {
         "merged": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/res/merged/androidTest/debug/layout/abc_screen_toolbar.xml",
         "source": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/res/merged/androidTest/debug/layout/notification_media_action.xml",
+        "source": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/notification_media_action.xml"
     },
     {
         "merged": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/res/merged/androidTest/debug/layout/abc_alert_dialog_button_bar_material.xml",

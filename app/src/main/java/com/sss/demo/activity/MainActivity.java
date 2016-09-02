@@ -103,6 +103,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mainBinding.button3.setOnClickListener(this);
         mainBinding.button4.setOnClickListener(this);
         mainBinding.button5.setOnClickListener(this);
+        mainBinding.button6.setOnClickListener(this);
     }
 
     private void showSnackbar(View v, String s) {
@@ -133,6 +134,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.button5:
                 startActivity(new Intent(getApplicationContext(), CroppingImageActivity.class));
+                break;
+            case R.id.button6:
+                startActivity(new Intent(getApplicationContext(), PlusMinusActivity.class));
                 break;
         }
     }

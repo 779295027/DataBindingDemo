@@ -23,7 +23,7 @@
         <activity android:name=".activity.CroppingImageActivity" />
         <activity android:name=".activity.HaveHeaderRecyclerActivity" />
         <activity android:name=".activity.CropResultActivity" />
-        <!--<activity android:name=".activity.DiyViewActivity" />-->
+        <activity android:name=".activity.PlusMinusActivity" />
     </application>
 
 </manifest>

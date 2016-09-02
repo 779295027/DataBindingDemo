@@ -1,3 +1,5 @@
+##2.0.2
+###尝试写了一个自定义控件，用于订单的加减，封装成库包plusandminuslayout
 ###添加截图功能，gradle版本提升至2.1.3
 
 ###添加带header的RecyclerView
@@ -11,8 +13,7 @@
 
 
 # DataBindingDemo
-Data Binding Demo
-谷歌官方提供的数据绑定框架，此gradle版本是2.1.2
+DataBinding是谷歌官方提供的数据绑定框架，此gradle版本是2.1.2
 
 ###配置
 因为2.1.2的gradle中已经集成了dataBinding，
@@ -111,7 +112,7 @@ mainBinding.setName("name");
 
 ```
 
-给对应控件添加事件
+给对应控件添加事件app
 
 ```java
 mainBinding.button.setOnClickListener(new View.OnClickListener() {
@@ -315,7 +316,7 @@ tablyout对象须实现setOnTabSelectedListener(OnTabSelectedListener onTabSelec
 核心是根据Adapter的getItemViewType()方法的参数position来给对应的item一个type值
 在onCreateViewHolder()中根据type判断是不是头部就行了
 
-＃CropperImage(截图功能)
+#CropperImage(截图功能)
 添加了一个截图功能，用的是国外一哥们（Arthur）的开源的截图
 源码地址：https://github.com/ArthurHub/Android-Image-Cropper
 
@@ -346,6 +347,8 @@ tablyout对象须实现setOnTabSelectedListener(OnTabSelectedListener onTabSelec
 ```
 
 注：截图返回的bitmap，可以按照自己的想法进行处理
+
+
 
 
 

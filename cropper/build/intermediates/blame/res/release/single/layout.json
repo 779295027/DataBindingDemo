@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/res/merged/release/layout/abc_search_view.xml",
-        "source": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_search_view.xml"
-    },
-    {
         "merged": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/res/merged/release/layout/select_dialog_singlechoice_material.xml",
         "source": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/res/merged/release/layout/abc_search_view.xml",
+        "source": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_search_view.xml"
     },
     {
         "merged": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/res/merged/release/layout/abc_screen_toolbar.xml",
@@ -16,12 +16,12 @@
         "source": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/src/main/res/layout/crop_image_activity.xml"
     },
     {
-        "merged": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/res/merged/release/layout/abc_list_menu_item_icon.xml",
-        "source": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_list_menu_item_icon.xml"
-    },
-    {
         "merged": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/res/merged/release/layout/abc_action_bar_up_container.xml",
         "source": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/res/merged/release/layout/abc_list_menu_item_icon.xml",
+        "source": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_list_menu_item_icon.xml"
     },
     {
         "merged": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/res/merged/release/layout/abc_screen_simple_overlay_action_mode.xml",
@@ -108,10 +108,6 @@
         "source": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/select_dialog_multichoice_material.xml"
     },
     {
-        "merged": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/res/merged/release/layout/abc_alert_dialog_button_bar_material.xml",
-        "source": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_alert_dialog_button_bar_material.xml"
-    },
-    {
         "merged": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/res/merged/release/layout/notification_media_cancel_action.xml",
         "source": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/notification_media_cancel_action.xml"
     },
@@ -120,12 +116,16 @@
         "source": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/notification_template_part_chronometer.xml"
     },
     {
-        "merged": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/res/merged/release/layout/notification_template_big_media.xml",
-        "source": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/notification_template_big_media.xml"
+        "merged": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/res/merged/release/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_alert_dialog_button_bar_material.xml"
     },
     {
         "merged": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/res/merged/release/layout/notification_template_lines.xml",
         "source": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/notification_template_lines.xml"
+    },
+    {
+        "merged": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/res/merged/release/layout/notification_template_big_media.xml",
+        "source": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/notification_template_big_media.xml"
     },
     {
         "merged": "/Users/sunshaoshuai/Desktop/DataBindingDemo/cropper/build/intermediates/res/merged/release/layout/notification_template_part_time.xml",

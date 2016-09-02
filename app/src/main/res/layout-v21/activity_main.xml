@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/tools">
 
     <data>
 
@@ -36,10 +36,11 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                bind:fabSize="normal"
-                bind:pressedTranslationZ="12dp"
-                bind:rippleColor="@color/colorPrimaryDark"
-                bind:useCompatPadding="true"></android.support.design.widget.FloatingActionButton>
+                app:backgroundTint="@color/colorAccent"
+                app:fabSize="normal"
+                app:pressedTranslationZ="12dp"
+                app:rippleColor="@color/colorPrimaryDark"
+                app:useCompatPadding="true"></android.support.design.widget.FloatingActionButton>
 
 
             <LinearLayout
@@ -105,10 +106,16 @@
                         android:text="HaveHeaderRecyclerActivity" />
 
                     <Button
-                        android:id="@+id/button5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="CroppingImageActivity" />
+                    android:id="@+id/button5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CroppingImageActivity" />
+
+                    <Button
+                    android:id="@+id/button6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PlusMinusActivity" />
                 </LinearLayout>
 
 
