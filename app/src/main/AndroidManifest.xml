@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.sss.demo"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sss.demo">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,15 +11,19 @@
         android:theme="@style/AppTheme">
         <activity android:name=".activity.MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.ImageActivity"/>
-        <activity android:name=".activity.TabActivity"/>
-        <activity android:name=".activity.HaveHeaderRecyclerActivity"/>
+        <activity android:name=".activity.DemoActivty" />
+        <activity android:name=".activity.ImageActivity" />
+        <activity android:name=".activity.TabActivity" />
+        <activity android:name=".activity.CroppingImageActivity" />
+        <activity android:name=".activity.HaveHeaderRecyclerActivity" />
+        <activity android:name=".activity.CropResultActivity" />
+        <!--<activity android:name=".activity.DiyViewActivity" />-->
     </application>
 
 </manifest>

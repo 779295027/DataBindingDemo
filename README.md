@@ -1,7 +1,8 @@
+###添加截图功能，gradle版本提升至2.1.3
+
 ###添加带header的RecyclerView
 
 ###添加TabLayout+ViewPager 实现底部Tab布局
-
 
 ###增加5.0后提出的Material Design中的FloatingActionButton，需要导入com.android.support:design:23.4.0包，因为是android5.0（API21）后才有的，所以须在新建一个layout-v21的包，以供android5.0（API21）及以上的手机调用，当然layout中也要有一个布局，以应对android5.0（API21）以下的手机进行适配
 ###增加SwipeRefreshLayout，SwipeRefreshLayout是谷歌官方提供的下拉刷新控件，可直接与ListView，RecyclerView,GridView等直接嵌套使用，不会冲突
@@ -313,3 +314,38 @@ tablyout对象须实现setOnTabSelectedListener(OnTabSelectedListener onTabSelec
 
 核心是根据Adapter的getItemViewType()方法的参数position来给对应的item一个type值
 在onCreateViewHolder()中根据type判断是不是头部就行了
+
+＃CropperImage(截图功能)
+添加了一个截图功能，用的是国外一哥们（Arthur）的开源的截图
+源码地址：https://github.com/ArthurHub/Android-Image-Cropper
+
+支持多种截图样式，最基本的长方形，正方形，还有圆形，还有其他等，
+
+该demo中只使用了正方形
+
+先导入库包cropper，在xml中调用
+
+```xml
+    ...
+        <com.theartofdev.edmodo.cropper.CropImageView
+                    android:id="@+id/cropImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cropAspectRatioX="1"
+                    app:cropAspectRatioY="1"/>
+    ...
+
+```
+
+在代码中添加截图监听，重写onCropImageComplete（CropImageView view, CropImageView.CropResult result)方法，用该方法的第二个参数，也就是result参数的getBitmap()方法可获得截出的图像
+
+```java
+//添加剪切图像监听
+        binding.cropImageView.setOnCropImageCompleteListener(this);
+
+```
+
+注：截图返回的bitmap，可以按照自己的想法进行处理
+
+
+

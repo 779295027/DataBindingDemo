@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/xuanzhuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="旋转" />
+
+            <Button
+                android:id="@+id/cropping"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="截取" />
+
+        </LinearLayout>
+
+        <com.theartofdev.edmodo.cropper.CropImageView
+            android:id="@+id/cropImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cropAspectRatioX="1"
+            app:cropAspectRatioY="1"/>
+    </LinearLayout>
+</layout>

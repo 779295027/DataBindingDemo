@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:bind="http://schemas.android.com/apk/res-auto">
 
     <data>
 
         <import
             alias="myUser"
-            type="com.sss.demo.bean.User"/>
+            type="com.sss.demo.bean.User" />
 
         <variable
             name="user"
-            type="myUser"/>
+            type="myUser" />
 
         <variable
             name="name"
-            type="String"/>
+            type="String" />
 
     </data>
 
@@ -23,8 +22,7 @@
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/swipe"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
 
         <RelativeLayout
@@ -41,8 +39,7 @@
                 bind:fabSize="normal"
                 bind:pressedTranslationZ="12dp"
                 bind:rippleColor="@color/colorPrimaryDark"
-                bind:useCompatPadding="true">
-            </android.support.design.widget.FloatingActionButton>
+                bind:useCompatPadding="true"></android.support.design.widget.FloatingActionButton>
 
 
             <LinearLayout
@@ -54,7 +51,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@{name}"/>
+                    android:text="@{name}" />
 
 
                 <LinearLayout
@@ -65,17 +62,17 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="下面的是user数据"/>
+                        android:text="下面的是user数据" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@{user.name}"/>
+                        android:text="@{user.name}" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@{user.age}"/>
+                        android:text="@{user.age}" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -87,25 +84,31 @@
                         android:id="@+id/button"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="ImageActivity"/>
+                        android:text="ImageActivity" />
 
                     <Button
                         android:id="@+id/button2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TabActivity"/>
+                        android:text="TabActivity" />
 
                     <Button
                         android:id="@+id/button3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="snackbar"/>
+                        android:text="snackbar" />
 
                     <Button
                         android:id="@+id/button4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="HaveHeaderRecyclerActivity"/>
+                        android:text="HaveHeaderRecyclerActivity" />
+
+                    <Button
+                        android:id="@+id/button5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CroppingImageActivity" />
                 </LinearLayout>
 
 
