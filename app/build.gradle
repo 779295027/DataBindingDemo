@@ -10,8 +10,8 @@ android {
         applicationId "com.buluanmai.app.buluanmaiApp"
         minSdkVersion 15
         targetSdkVersion 24
-        versionCode 2
-        versionName "2.0.2"
+        versionCode 3
+        versionName "2.0.3"
     }
     buildTypes {
         release {

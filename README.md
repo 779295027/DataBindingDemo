@@ -1,13 +1,18 @@
-##2.0.2
-###尝试写了一个自定义控件，用于订单的加减，封装成库包plusandminuslayout
-###添加截图功能，gradle版本提升至2.1.3
+## 2.0.3
+### ImageLoad图片加载类中添加新方法，displayNeedToken（Context,String,ImageView）用来加载需要身份验证的图片
 
-###添加带header的RecyclerView
 
-###添加TabLayout+ViewPager 实现底部Tab布局
 
-###增加5.0后提出的Material Design中的FloatingActionButton，需要导入com.android.support:design:23.4.0包，因为是android5.0（API21）后才有的，所以须在新建一个layout-v21的包，以供android5.0（API21）及以上的手机调用，当然layout中也要有一个布局，以应对android5.0（API21）以下的手机进行适配
-###增加SwipeRefreshLayout，SwipeRefreshLayout是谷歌官方提供的下拉刷新控件，可直接与ListView，RecyclerView,GridView等直接嵌套使用，不会冲突
+## 2.0.2
+### 尝试写了一个自定义控件，用于订单的加减，封装成库包plusandminuslayout
+### 添加截图功能，gradle版本提升至2.1.3
+
+### 添加带header的RecyclerView
+
+### 添加TabLayout+ViewPager 实现底部Tab布局
+
+### 增加5.0后提出的Material Design中的FloatingActionButton，需要导入com.android.support:design:23.4.0包，因为是android5.0（API21）后才有的，所以须在新建一个layout-v21的包，以供android5.0（API21）及以上的手机调用，当然layout中也要有一个布局，以应对android5.0（API21）以下的手机进行适配
+### 增加SwipeRefreshLayout，SwipeRefreshLayout是谷歌官方提供的下拉刷新控件，可直接与ListView，RecyclerView,GridView等直接嵌套使用，不会冲突
 
 
 
@@ -15,7 +20,7 @@
 # DataBindingDemo
 DataBinding是谷歌官方提供的数据绑定框架，此gradle版本是2.1.2
 
-###配置
+### 配置
 因为2.1.2的gradle中已经集成了dataBinding，
 所以只需要使用Data Binding的Moudle的build.gradle中添加以下属性
 
@@ -31,7 +36,7 @@ android {
 
 dataBinding大概在gradle1.5版本中就已经集成在一起了
 
-###布局使用
+### 布局使用
 
 
 起始根标签是 layout，接下来一个 data 元素以及一个 view 的根元素。这个 view 元素就是你没有使用Data Binding的layout文件的根元素
@@ -73,7 +78,7 @@ dataBinding大概在gradle1.5版本中就已经集成在一起了
 </layout>
 ```
 
-###Bean对象
+### Bean对象
 
 自定义一个User实体
 
@@ -95,7 +100,7 @@ public class User {
 ```
 
 
-###调用
+### 调用
 使用databinding，每个布局都会对应生成一个ViewDataBinding类，
 类中包括可以传到页面的参数，以及各个控件的id，可以直接操作
 
@@ -203,9 +208,9 @@ class OnRefreshAsyncTask extends AsyncTask<Void, Void, Void> {
 ```
 
 
-#添加图片加载框架Glide（谷歌官方提供的调用方便）
+# 添加图片加载框架Glide（谷歌官方提供的调用方便）
 
-###导入支持包
+### 导入支持包
 ```java
 dependencies {
     ...
@@ -228,7 +233,7 @@ Glide.with(context)
 ```
 
 
-#给RecyclerView添加间距  
+# 给RecyclerView添加间距  
 
 添加间距，间距为1dp
 
@@ -265,9 +270,9 @@ public class SpaceItemDecoration extends RecyclerView.ItemDecoration {
 ```
 
 
-#使用TabLayout+ViewPager 实现底部Tab布局
+# 使用TabLayout+ViewPager 实现底部Tab布局
 
-###因为TabLayout和ViewPager分别是属于design和v4包下的，所以我们先在app的build.gradle中添加：
+### 因为TabLayout和ViewPager分别是属于design和v4包下的，所以我们先在app的build.gradle中添加：
 ```java
 dependencies {
     ...
@@ -310,13 +315,13 @@ xml中使用方式
 
 tablyout对象须实现setOnTabSelectedListener(OnTabSelectedListener onTabSelectedListener)方法，当添加item选择改变时会调用该方法
 
-#HaveHeaderRecyclerAdapter
+# HaveHeaderRecyclerAdapter
 这是一个给RecyclerView添加一个头部的适配器
 
 核心是根据Adapter的getItemViewType()方法的参数position来给对应的item一个type值
 在onCreateViewHolder()中根据type判断是不是头部就行了
 
-#CropperImage(截图功能)
+# CropperImage(截图功能)
 添加了一个截图功能，用的是国外一哥们（Arthur）的开源的截图
 源码地址：https://github.com/ArthurHub/Android-Image-Cropper
 
@@ -349,7 +354,7 @@ tablyout对象须实现setOnTabSelectedListener(OnTabSelectedListener onTabSelec
 注：截图返回的bitmap，可以按照自己的想法进行处理
 
 
-#License
+# License
 ```
 Copyright (c) 2016.  sss
 
